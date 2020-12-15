@@ -17,6 +17,7 @@ const UseEffectFetchData = () => {
   useEffect(() => {
     getUsers();
   }, []);
+
   return (
     <>
       <h3>github users</h3>
