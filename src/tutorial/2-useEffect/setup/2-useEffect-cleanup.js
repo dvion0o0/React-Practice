@@ -4,7 +4,21 @@ import React, { useState, useEffect } from 'react';
 // second argument
 
 const UseEffectCleanup = () => {
-  return <h2>useEffect cleanup</h2>;
+  const [value, setValue] = useState(window.innerWidth);
+  const change = () => {
+    setValue(window.innerWidth);
+  }
+  useEffect(() =>{
+    window.addEventListener("resize", change);
+    return () =>{
+      window.removeEventListener('resize', change);
+    }
+  });
+
+  return <>
+  <h1>Window Size</h1>
+  <h2>{value} Px</h2>
+  </>;
 };
 
 export default UseEffectCleanup;
