@@ -23,7 +23,7 @@ useEffect(() =>{
   return () => {
     window.removeEventListener('resize', check);
   }
-})
+});
   
   return <div style ={{marginTop:'2rem'}}>
     <h1>Window</h1>
