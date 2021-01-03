@@ -36,15 +36,6 @@ const List = ({ people, removePerson }) => {
   );
 };
 
-const singlePerson = ({ id, name, removePerson }) => {
-  return (
-    <div className="item">
-      <h4>hello</h4>
-      <button onClick={() => removePerson(id)}>remove</button>
-    </div>
-  );
-};
-
 const SinglePerson = ({ id, name, removePerson }) => {
   return (
     <div className="item">
